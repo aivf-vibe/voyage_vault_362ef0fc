@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super - Ride Revolution</title>
+    <style>
+        :root {
+            --primary: #09090A;
+            --accent: #3FC1C0;
+            --text: #F5F5F5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            background: var(--primary);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text);
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(9, 9, 10, 0.7), rgba(9, 9, 10, 0.7)),
+                        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--text);
+            z-index: 1;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        /* New Section Styles */
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .features {
+            background: var(--text);
+            color: var(--primary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .how-it-works {
+            background: var(--primary);
+            color: var(--text);
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: var(--text);
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .footer-section a {
+            color: var(--text);
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">SUPER</div>
+        <div class="nav-links">
+            <a href="#ride">Ride</a>
+            <a href="#drive">Drive</a>
+            <a href="#safety">Safety</a>
+            <a href="#help">Help</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Ride, Supercharged</h1>
+            <p>Get where you need to go with speed and style</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">Ride Now</button>
+                <button class="btn btn-primary">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="section-content">
+            <h2>Why Choose Super?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🚕 Instant Rides</h3>
+                    <p>Get matched with a driver in under 2 minutes</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💰 Upfront Pricing</h3>
+                    <p>Know your fare before you ride</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛡️ Safety First</h3>
+                    <p>24/7 support and emergency assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="section-content">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Request</h3>
+                    <p>Enter your destination</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Match</h3>
+                    <p>Get paired with a driver</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Ride</h3>
+                    <p>Track arrival in real-time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Super</h4>
+                <p>© 2025 Super Technologies Inc.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#about">About</a>
+                <a href="#careers">Careers</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#privacy">Privacy</a>
+                <a href="#terms">Terms</a>
+                <a href="#licenses">Licenses</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.style.backgroundColor = window.scrollY > 0 ? 'rgba(9, 9, 10, 0.9)' : 'var(--primary)';
+        });
+
+        // Add mobile menu functionality
+        const menuIcon = document.createElement('div');
+        menuIcon.innerHTML = '☰';
+        menuIcon.style.color = 'var(--text)';
+        menuIcon.style.cursor = 'pointer';
+        menuIcon.style.display = 'none';
+        nav.appendChild(menuIcon);
+
+        window.addEventListener('resize', () => {
+            menuIcon.style.display = window.innerWidth < 768 ? 'block' : 'none';
+            document.querySelector('.nav-links').style.display = 
+                window.innerWidth < 768 ? 'none' : 'flex';
+        });
+
+        menuIcon.addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
